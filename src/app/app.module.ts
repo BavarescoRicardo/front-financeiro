@@ -20,6 +20,7 @@ import { ModalSimplesComponent } from './components/modal-simples/modal-simples.
 import { MatFormFieldModule } from '@angular/material/form-field'; 
 import {FormsModule} from '@angular/forms';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
+import { HttpClientModule } from  '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { CreateUserComponent } from './pages/create-user/create-user.component';
     MatDialogModule,
     MatInputModule,    
     MatFormFieldModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [],
