@@ -25,6 +25,7 @@ import {FormsModule} from '@angular/forms';
     HeaderComponent,
     BannerComponent,
     FooterComponent,
+    AppComponent,
     ContainerComponent,
     HomeComponent,
     CardSimplesComponent,
@@ -37,6 +38,7 @@ import {FormsModule} from '@angular/forms';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
     MatDialogModule,
     MatFormFieldModule,
     FormsModule
