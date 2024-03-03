@@ -2,18 +2,25 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 5ch;
-}
-
-.field-full-width {
+  }
+  
+  .field-full-width {
     display: flex;
     flex-wrap: wrap;
     padding: 5ch;
     margin: 5ch;
+    overflow: visible !important;
+    margin: 1em;
   }
-
-mat-label {
-    margin: 0;
-    padding: 0;
-}
   
+  .custom-mat-label .mat-form-field-label-wrapper {
+    overflow: visible !important;
+  }
   
+  .mat-input-element {
+    overflow: visible !important;
+  }
+  
+  .field-label {
+    padding-bottom: 1rem;
+  }

@@ -10,6 +10,7 @@
   padding: 5ch;
   margin: 5ch;
   overflow: visible !important;
+  margin: 1em;
 }
 
 .custom-mat-label .mat-form-field-label-wrapper {
@@ -20,6 +21,6 @@
   overflow: visible !important;
 }
 
-.mat-form-field-label {
-  padding-bottom: 1.15em !important;
+.field-label {
+  padding-bottom: 1rem;
 }

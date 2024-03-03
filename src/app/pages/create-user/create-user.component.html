@@ -1,23 +1,19 @@
 <h5><u><i>Formulário Cadastrar usuário</i></u></h5>
 <form class="form" (ngSubmit)="submitForm()">
   <mat-form-field class="field-full-width">
-    <mat-label>Nome do usuário</mat-label>
-    <input matInput placeholder="Digite seu nome" name="nome" [(ngModel)]="user.nome" required>
+    <label class="field-label">Seu nome</label><input matInput placeholder="Digite seu nome" name="nome" [(ngModel)]="user.nome" required>
   </mat-form-field>
 
   <mat-form-field class="field-full-width">
-    <mat-label>Email</mat-label>
-    <input matInput placeholder="Digite seu email" name="email" [(ngModel)]="user.email" type="email" required>
+    <label class="field-label">Seu email</label><input matInput placeholder="Digite seu email" name="email" [(ngModel)]="user.email" type="email" required>
   </mat-form-field>
 
   <mat-form-field class="field-full-width">
-    <mat-label>Senha</mat-label>
-    <input matInput placeholder="Digite sua senha" name="senha" [(ngModel)]="user.senha" type="password" required>
+    <label class="field-label">Sua senha</label><input matInput placeholder="Digite sua senha" name="senha" [(ngModel)]="user.senha" type="password" required>
   </mat-form-field>
 
   <mat-form-field class="field-full-width">
-    <mat-label>Idade</mat-label>
-    <input matInput placeholder="Digite sua idade" name="idade" [(ngModel)]="user.idade" type="number" required>
+    <label class="field-label">Sua idade</label><input matInput name="idade" [(ngModel)]="user.idade" type="number" required>
   </mat-form-field>
 
   <button mat-raised-button color="primary" type="submit">Cadastrar</button>
