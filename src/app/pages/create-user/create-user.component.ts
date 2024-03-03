@@ -8,12 +8,22 @@ import {Router} from '@angular/router';
 })
 export class CreateUserComponent implements OnInit {
 
+  user: any = {
+    nome: '',
+    senha: '',
+    email: '',
+    createdat: '',
+    updatedat: '',
+    idade: 0,
+  };
+
   constructor(private router: Router) { }
 
-  submit(){
-    console.log("user name is " + this.username)
-    }  
-
+  submitForm() {
+    // Handle form submission logic here
+    console.log('User:', this.user);
+    // Add your API call or other logic to save the user
+  }
   username : string ="";
   password : string ="";
   show: boolean= false;

@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5ch;
+}
+
+.field-full-width {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5ch;
+    margin: 5ch;
+  }
+
+mat-label {
+    margin: 0;
+    padding: 0;
+}
+  
+  

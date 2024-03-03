@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { ContainerComponent } from './components/container/container.component';
 import { HomeComponent } from './pages/home/home.component'; 
 import { MatCardModule } from '@angular/material/card';
@@ -42,6 +43,7 @@ import { CreateUserComponent } from './pages/create-user/create-user.component';
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
+    MatInputModule,    
     MatFormFieldModule,
     FormsModule
   ],

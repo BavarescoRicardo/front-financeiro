@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5ch;
+}
+
+.field-full-width {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5ch;
+  margin: 5ch;
+  overflow: visible !important;
+}
+
+.custom-mat-label .mat-form-field-label-wrapper {
+  overflow: visible !important;
+}
+
+.mat-input-element {
+  overflow: visible !important;
+}
+
+.mat-form-field-label {
+  padding-bottom: 1.15em !important;
+}
