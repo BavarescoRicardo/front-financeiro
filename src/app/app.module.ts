@@ -18,6 +18,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ModalSimplesComponent } from './components/modal-simples/modal-simples.component';   
 import { MatFormFieldModule } from '@angular/material/form-field'; 
 import {FormsModule} from '@angular/forms';
+import { CreateUserComponent } from './pages/create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import {FormsModule} from '@angular/forms';
     HomeComponent,
     CardSimplesComponent,
     LoginComponent,
+    CreateUserComponent,
     ModalSimplesComponent
   ],
   imports: [
