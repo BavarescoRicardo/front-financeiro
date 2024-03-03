@@ -2,15 +2,14 @@
     padding: 0;
     margin: 0;
     background-color: rgb(221, 220, 218);
-    border-radius: 5%;
-    opacity: 0.8;    
+    border-radius: 4%;
+    opacity: 0.9;
+    max-height: 65ch;;    
 }
 
 img {
     display: flex;    
-    margin: 1ch auto;
-    margin-left: 2ch;
-    padding: 1ch;
+    margin-left: 5px;
     border-radius: 5%;
-    opacity: 0.9;
+    opacity: 0.8;
 }
