@@ -21,6 +21,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { HttpClientModule } from  '@angular/common/http';
+import { BudgetComponent } from './pages/budget/budget.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { HttpClientModule } from  '@angular/common/http';
     CardSimplesComponent,
     LoginComponent,
     CreateUserComponent,
+    BudgetComponent,
     ModalSimplesComponent
   ],
   imports: [

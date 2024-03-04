@@ -1,0 +1,18 @@
+<h5><u><i>Formulário Cadastrar financeiro</i></u></h5>
+<form class="form" (ngSubmit)="submitForm()">
+  <mat-form-field class="field-full-width">
+    <label class="field-label">Seu nome</label><input matInput placeholder="Digite seu nome" name="nome" [(ngModel)]="budget.nome" required>
+  </mat-form-field>
+
+  <mat-form-field class="field-full-width">
+    <label class="field-label">Saldo aplicado</label><input matInput placeholder="Digite seu saldo" name="amount" [(ngModel)]="budget.amount" type="number" required>
+  </mat-form-field>
+
+  <mat-form-field class="field-full-width">
+    <label class="field-label">Categoria da aplicação</label><input matInput placeholder="Digite a categoria" name="category" [(ngModel)]="budget.category" type="number" required>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+</form>
+
+<a routerLink="/">Início</a>
