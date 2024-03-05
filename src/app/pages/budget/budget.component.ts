@@ -15,7 +15,7 @@ export class BudgetComponent implements OnInit {
   };
 
   budgets: any[] = [];
-  displayedColumns: string[] = ['name', 'amount', 'category'];
+  displayedColumns: string[] = ['name', 'amount', 'category', 'remover'];
 
   constructor(private router: Router, private http: HttpClient) { }
   apiURL = "http://localhost:3000";
@@ -34,6 +34,30 @@ export class BudgetComponent implements OnInit {
         }
       );
   }
+
+  removeBudget(budget: any) {
+    // Add logic to remove the budget item, e.g., make an HTTP DELETE request
+    const index = this.budgets.indexOf(budget);
+    if (index !== -1) {
+      console.log(budget._id);
+      this.removerBudget(budget._id);
+    }
+  }
+
+  removerBudget(indice: any) {
+    console.log('Budget:', indice);
+    this.http.delete(`${this.apiURL}/budget/id=`, indice)
+      .subscribe(
+        (resultado: any) => {
+          console.log(resultado);
+        },
+        (erro: any) => {
+          if (erro.status == 400) {
+            console.log(erro);
+          }
+        }
+      );
+  }  
 
   submitForm() {
     // Handle form submission logic here    

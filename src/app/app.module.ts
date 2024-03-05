@@ -23,6 +23,7 @@ import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { BudgetComponent } from './pages/budget/budget.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { MatTableModule } from '@angular/material/table';
     MatCardModule,
     MatDialogModule,
     MatInputModule,
-    MatTableModule,    
+    MatTableModule,
+    MatIconModule,    
     MatFormFieldModule,
     HttpClientModule,
     FormsModule
