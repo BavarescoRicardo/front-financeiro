@@ -1,7 +1,7 @@
 <h5><u><i>Formulário Cadastrar financeiro</i></u></h5>
 <form class="form" (ngSubmit)="submitForm()">
   <mat-form-field class="field-full-width">
-    <label class="field-label">Seu nome</label><input matInput placeholder="Digite seu nome" name="nome" [(ngModel)]="budget.name" required>
+    <label class="field-label">Orçamento nome</label><input matInput placeholder="Digite seu nome" name="name" [(ngModel)]="budget.name" required>
   </mat-form-field>
 
   <mat-form-field class="field-full-width">
@@ -16,3 +16,30 @@
 </form>
 
 <a routerLink="/">Início</a>
+
+
+<!-- Table to list financial data -->
+<h5><u><i>Lista de Finanças</i></u></h5>
+<table mat-table [dataSource]="budgets" class="mat-elevation-z8">
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Orçamento Nome </th>
+    <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+  </ng-container>
+
+  <!-- Amount Column -->
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef> Saldo Aplicado </th>
+    <td mat-cell *matCellDef="let element"> {{ element.amount }} </td>
+  </ng-container>
+
+  <!-- Category Column -->
+  <ng-container matColumnDef="category">
+    <th mat-header-cell *matHeaderCellDef> Categoria da Aplicação </th>
+    <td mat-cell *matCellDef="let element"> {{ element.category }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

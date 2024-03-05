@@ -22,6 +22,8 @@ import {FormsModule} from '@angular/forms';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { BudgetComponent } from './pages/budget/budget.component';
+import { MatTableModule } from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
@@ -46,7 +48,8 @@ import { BudgetComponent } from './pages/budget/budget.component';
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
-    MatInputModule,    
+    MatInputModule,
+    MatTableModule,    
     MatFormFieldModule,
     HttpClientModule,
     FormsModule
