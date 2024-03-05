@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 })
 export class BudgetComponent implements OnInit {  
   budget: any = {
-    nome: '',
+    name: '',
     amount: 0,
     category: ''
   };
@@ -37,18 +37,11 @@ export class BudgetComponent implements OnInit {
     this.adicionarBudget(this.budget);
     // Add your API call or other logic to save the user
   }
-  username : string ="";
-  password : string ="";
-  show: boolean= false;
+  name : string ="";
+  amount : string ="";
+  category: boolean= false;
 
   ngOnInit() {
   }
 
-  login() : void {
-    if(this.username == 'admin' && this.password == 'admin'){
-     this.router.navigate(["budget"]);
-    }else {
-      alert("Invalid credentials");
-    }
-  }  
 }
