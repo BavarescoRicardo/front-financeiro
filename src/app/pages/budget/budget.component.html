@@ -2,11 +2,11 @@
   <h5><u><i>Formulário Cadastrar financeiro</i></u></h5>
   <form class="form" (ngSubmit)="submitForm()">
     <mat-form-field class="field-full-width">
-      <label class="field-label">Orçamento nome</label><input matInput placeholder="Digite seu nome" name="name" [(ngModel)]="budget.name" required>
+      <label class="field-label">Orçamento nome</label><input matInput placeholder="Digite nome deste orçamento" name="name" [(ngModel)]="budget.name" required>
     </mat-form-field>
 
     <mat-form-field class="field-full-width">
-      <label class="field-label">Saldo aplicado</label><input matInput placeholder="Digite seu saldo" name="amount" [(ngModel)]="budget.amount" type="number" required>
+      <label class="field-label">Saldo aplicado</label><input matInput placeholder="Digite o saldo deste orçamento" name="amount" [(ngModel)]="budget.amount" type="number" required>
     </mat-form-field>
 
     <mat-form-field class="field-full-width">

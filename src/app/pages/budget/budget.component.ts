@@ -26,6 +26,7 @@ export class BudgetComponent implements OnInit {
       .subscribe(
         (resultado: any) => {
           console.log(resultado);
+          this.fetchBudgets();
         },
         (erro: any) => {
           if (erro.status == 400) {
