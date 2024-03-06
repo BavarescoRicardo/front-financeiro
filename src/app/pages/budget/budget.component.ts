@@ -39,6 +39,7 @@ export class BudgetComponent implements OnInit {
     // Add logic to remove the budget item, e.g., make an HTTP DELETE request
     const index = this.budgets.indexOf(budget);
     if (index !== -1) {
+      console.log("Tenta remover");
       console.log(budget._id);
       this.removerBudget(budget._id);
     }
@@ -46,7 +47,7 @@ export class BudgetComponent implements OnInit {
 
   removerBudget(indice: any) {
     console.log('Budget:', indice);
-    this.http.delete(`${this.apiURL}/budget/id=`, indice)
+    this.http.delete(`${this.apiURL}/budget/${indice}`)
       .subscribe(
         (resultado: any) => {
           console.log(resultado);
