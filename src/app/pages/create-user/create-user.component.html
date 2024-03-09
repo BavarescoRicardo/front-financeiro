@@ -19,4 +19,36 @@
   <button mat-raised-button color="primary" type="submit">Cadastrar</button>
 </form>
 
+
+<h5><u><i>Lista de Usuários</i></u></h5>
+<table mat-table [dataSource]="users" class="mat-elevation-z8">
+  
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email do usuário </th>
+    <td mat-cell *matCellDef="let element"> {{ element.email }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="idade">
+    <th mat-header-cell *matHeaderCellDef> Idade do usuário </th>
+    <td mat-cell *matCellDef="let element"> {{ element.idade }} </td>
+  </ng-container>
+  
+  <ng-container matColumnDef="remover">
+    <th mat-header-cell *matHeaderCellDef> Ações </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button color="warn" (click)="removerUser(element)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </td>
+  </ng-container>  
+  
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
 <a routerLink="/">Início</a>

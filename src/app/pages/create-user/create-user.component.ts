@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-user',
@@ -10,12 +10,15 @@ import {Router} from '@angular/router';
 export class CreateUserComponent implements OnInit {  
   user: any = {
     nome: '',
-    idade: 0,
-    email: '',
     senha: '',
+    email: '',
+    idade: 0,
     createdat: '',
     updatedat: '',
   };
+
+  users: any[] = [];
+  displayedColumns: string[] = ['name', 'email', 'idade', 'remover'];  
 
   constructor(private router: Router, private http : HttpClient) { }
   apiURL = "http://localhost:3000";  
@@ -44,14 +47,45 @@ export class CreateUserComponent implements OnInit {
   password : string ="";
   show: boolean= false;
 
-  ngOnInit() {
+  removeUser(user: any) {
+    // Add logic to remove the budget item, e.g., make an HTTP DELETE request
+    const index = this.user.indexOf(user);
+    if (index !== -1) {
+      console.log("Tenta remover");
+      console.log(user._id);
+      this.removerUser(user._id);
+    }
   }
 
-  login() : void {
-    if(this.username == 'admin' && this.password == 'admin'){
-     this.router.navigate(["user"]);
-    }else {
-      alert("Invalid credentials");
-    }
+  removerUser(indice: any) {
+    console.log('usuario:', indice);
+    this.http.delete(`${this.apiURL}/user/${indice}`)
+      .subscribe(
+        (resultado: any) => {
+          console.log(resultado);
+          this.fetchUsers();
+        },
+        (erro: any) => {
+          if (erro.status == 400) {
+            console.log(erro);
+          }
+        }
+      );
   }  
+
+  ngOnInit() {
+    this.fetchUsers();
+  }
+
+  fetchUsers() {
+    this.http.get<any[]>(`${this.apiURL}/user`)
+      .subscribe(
+        (data: any[]) => {
+          this.users = data; // Use the correct property name here
+        },
+        (error: any) => {
+          console.error(error);
+        }
+      );
+  } 
 }
