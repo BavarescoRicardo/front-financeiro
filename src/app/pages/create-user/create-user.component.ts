@@ -41,14 +41,12 @@ export class CreateUserComponent implements OnInit {
   submitForm() {
     // Handle form submission logic here    
     this.adicionarUsuario(this.user);
-    // Add your API call or other logic to save the user
   }
   username : string ="";
   password : string ="";
   show: boolean= false;
 
   removeUser(user: any) {
-    // Add logic to remove the budget item, e.g., make an HTTP DELETE request
     const index = this.users.indexOf(user);
     if (index !== -1) {
       console.log("Tenta remover");
