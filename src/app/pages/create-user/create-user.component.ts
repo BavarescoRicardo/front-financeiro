@@ -18,7 +18,7 @@ export class CreateUserComponent implements OnInit {
   };
 
   users: any[] = [];
-  displayedColumns: string[] = ['name', 'email', 'idade', 'remover'];  
+  displayedColumns: string[] = ['nome', 'email', 'idade', 'remover'];  
 
   constructor(private router: Router, private http : HttpClient) { }
   apiURL = "http://localhost:3000";  
