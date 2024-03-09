@@ -28,7 +28,8 @@ export class CreateUserComponent implements OnInit {
     this.http.post(`${ this.apiURL }/user`, usuario)    
               .subscribe(
                 (resultado: any) => {
-                  console.log(resultado)
+                  console.log(resultado);
+                  this.fetchUsers();
                 },
                 (erro: any) => {
                   if(erro.status == 400) {
