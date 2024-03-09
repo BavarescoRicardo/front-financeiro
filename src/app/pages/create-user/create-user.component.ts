@@ -49,7 +49,7 @@ export class CreateUserComponent implements OnInit {
 
   removeUser(user: any) {
     // Add logic to remove the budget item, e.g., make an HTTP DELETE request
-    const index = this.user.indexOf(user);
+    const index = this.users.indexOf(user);
     if (index !== -1) {
       console.log("Tenta remover");
       console.log(user._id);
