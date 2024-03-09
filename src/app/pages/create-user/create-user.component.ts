@@ -39,7 +39,6 @@ export class CreateUserComponent implements OnInit {
   }
 
   submitForm() {
-    // Handle form submission logic here    
     this.adicionarUsuario(this.user);
   }
   username : string ="";
