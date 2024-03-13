@@ -24,6 +24,8 @@ import { HttpClientModule } from  '@angular/common/http';
 import { BudgetComponent } from './pages/budget/budget.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 @NgModule({
@@ -39,6 +41,7 @@ import { MatIconModule } from '@angular/material/icon';
     LoginComponent,
     CreateUserComponent,
     BudgetComponent,
+    ProfileComponent,
     ModalSimplesComponent
   ],
   imports: [
@@ -56,7 +59,9 @@ import { MatIconModule } from '@angular/material/icon';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

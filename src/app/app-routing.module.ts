@@ -5,12 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { BudgetComponent } from './pages/budget/budget.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CreateUserComponent },
-  { path: 'budget', component: BudgetComponent }
+  { path: 'budget', component: BudgetComponent },
+  { path: 'profile', component: ProfileComponent }
 ];
 
 @NgModule({
