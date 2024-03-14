@@ -1,8 +1,7 @@
 <div class="container">
 
   <h5><u><i>Dados deste usúario</i></u></h5>
-  <table mat-table [dataSource]="profiles" class="mat-elevation-z8">
-    
+  <table mat-table [dataSource]="profiles" class="mat-elevation-z8">    
     <ng-container matColumnDef="sub">
       <th mat-header-cell *matHeaderCellDef> Email </th>
       <td mat-cell *matCellDef="let element"> {{ element.sub }} </td>
@@ -16,6 +15,5 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
-
   <a routerLink="/">Início</a>
 </div>

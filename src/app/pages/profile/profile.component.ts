@@ -17,18 +17,17 @@ export class ProfileComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(localStorage.getItem('token'));
     this.fetchProfiles();
   }
 
   fetchProfiles() {
-    this.http.get<any[]>(`${this.apiURL}/profile`, {
+        this.http.get<any[]>(`${this.apiURL}/profile`, {
       headers: {
           "Authorization": `Bearer ${localStorage.getItem('token')}`
       }})
       .subscribe(
         (data: any[]) => {
-          this.profiles = data; 
+          this.profiles = [data];
         },
         (error: any) => {
           console.error(error);
