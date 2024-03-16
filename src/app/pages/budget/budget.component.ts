@@ -46,7 +46,7 @@ export class BudgetComponent implements OnInit {
     }
   }
 
-  removerBudget(indice: any) {
+  removerBudget(indice: string) {
     console.log('Budget:', indice);
     this.http.delete(`${this.apiURL}/budget/${indice}`)
       .subscribe(

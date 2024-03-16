@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from '../../dao/user/user';
 
 @Component({
   selector: 'app-create-user',
@@ -8,13 +9,14 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-user.component.scss']
 })
 export class CreateUserComponent implements OnInit {  
-  user: any = {
+  user: User = {
     nome: '',
     senha: '',
     email: '',
     idade: 0,
     createdat: '',
     updatedat: '',
+    budgets: ''
   };
 
   users: any[] = [];
