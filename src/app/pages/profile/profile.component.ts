@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
   }
 
   fetchProfiles() {
-        this.http.get<any[]>(`${this.apiURL}/profile`, {
+        this.http.get<any[]>(`${this.apiURL}/perfil`, {
       headers: {
           "Authorization": `Bearer ${localStorage.getItem('token')}`
       }})
