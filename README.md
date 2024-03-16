@@ -13,14 +13,14 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Trabalho A1 para pós Graduação 
-# Princípios do Desenvolvimento Web e Mobile - 2024
+# Trabalho A1 para pós Graduação 
+## Princípios do Desenvolvimento Web e Mobile - 2024
 
 Inicio do projeto 29/02/2024
 Utilizando NestJS para backend e Angular JS para o frontend
 By Ricardo Bavaresco
 
-# api disponível em:
+## api disponível em:
 https://github.com/BavarescoRicardo/plano-financeiro
 
 
@@ -40,8 +40,3 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build --base-href https://BavarescoRicardo.github.io/front-financeiro` 
 to build the project. The build artifacts will be stored in the `dist/` directory.
-
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
