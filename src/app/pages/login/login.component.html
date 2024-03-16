@@ -8,7 +8,11 @@
     <label class="field-label">Senha</label><input matInput name="senha" [(ngModel)]="user.senha" type="password" required>
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="submit()">Submit</button>
-  <span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span>
+  <div class="botao-logar">
+    <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+    <span *ngIf="show"> <button mat-button color="accent">Login success !!</button></span>
+  </div>
 </form>
-<a routerLink="/">Inicio</a>
+<div class="rota-inicio">
+  <a routerLink="/">Inicio</a>
+</div>
