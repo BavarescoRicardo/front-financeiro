@@ -22,7 +22,10 @@ export class BudgetComponent implements OnInit {
 
   adicionarBudget(budget: any) {
     console.log('Budget:', budget);
-    this.http.post(`${this.apiURL}/budget`, budget)
+    this.http.post(`${this.apiURL}/budget`, budget, {
+      headers: {
+          "Authorization": `Bearer ${localStorage.getItem('token')}`
+      }})
       .subscribe(
         (resultado: any) => {
           console.log(resultado);
@@ -37,7 +40,6 @@ export class BudgetComponent implements OnInit {
   }
 
   removeBudget(budget: any) {
-    // Add logic to remove the budget item, e.g., make an HTTP DELETE request
     const index = this.budgets.indexOf(budget);
     if (index !== -1) {
       console.log("Tenta remover");
@@ -48,7 +50,10 @@ export class BudgetComponent implements OnInit {
 
   removerBudget(indice: string) {
     console.log('Budget:', indice);
-    this.http.delete(`${this.apiURL}/budget/${indice}`)
+    this.http.delete(`${this.apiURL}/budget/${indice}`, {
+      headers: {
+          "Authorization": `Bearer ${localStorage.getItem('token')}`
+      }})
       .subscribe(
         (resultado: any) => {
           console.log(resultado);
