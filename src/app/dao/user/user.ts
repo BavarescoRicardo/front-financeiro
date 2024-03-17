@@ -5,5 +5,5 @@ export interface User {
     idade: 0,
     createdat: '',
     updatedat: '',
-    budgets: ''
+    budgets?: []
 }

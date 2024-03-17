@@ -54,25 +54,9 @@ export class ProfileComponent implements OnInit {
       if (userResult) {
         const user = userResult as User;
         if (user.budgets) {
-          this.apiConsultaOrcamento(user.budgets);      
+          console.log(user.budgets);
         }      
       }
     } 
   } 
-
-  apiConsultaOrcamento(indice: string) {
-      console.log('Budget:', indice);
-      this.http.get(`${this.apiURL}/budget/${indice}`)
-        .subscribe(
-          (resultado: any) => {
-            console.log(resultado);
-            // this.fetchBudgets();
-          },
-          (erro: any) => {
-            if (erro.status == 400) {
-              console.log(erro);
-            }
-          }
-        );
-    }   
 }

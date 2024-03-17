@@ -10,7 +10,7 @@ export class UserDao {
         idade: 0,
         createdat: '',
         updatedat: '',
-        budgets: ''
+        budgets: []
       };
     users: any[] = [];
     apiURL: string;

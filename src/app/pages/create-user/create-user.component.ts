@@ -15,8 +15,7 @@ export class CreateUserComponent implements OnInit {
     email: '',
     idade: 0,
     createdat: '',
-    updatedat: '',
-    budgets: ''
+    updatedat: ''
   };
 
   users: any[] = [];
