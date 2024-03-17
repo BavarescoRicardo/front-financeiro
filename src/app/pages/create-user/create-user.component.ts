@@ -29,7 +29,7 @@ export class CreateUserComponent implements OnInit {
     this.http.post(`${ this.apiURL }/user`, usuario)    
               .subscribe(
                 (resultado: any) => {
-                  console.log(resultado);
+                  localStorage.setItem('token', resultado.access_token);
                   this.fetchUsers();
                 },
                 (erro: any) => {
@@ -58,7 +58,10 @@ export class CreateUserComponent implements OnInit {
 
   removerUser(indice: any) {
     console.log('usuario:', indice);
-    this.http.delete(`${this.apiURL}/user/${indice}`)
+    this.http.delete(`${this.apiURL}/user/${indice}`, {
+      headers: {
+          "Authorization": `Bearer ${localStorage.getItem('token')}`
+      }})
       .subscribe(
         (resultado: any) => {
           console.log(resultado);
