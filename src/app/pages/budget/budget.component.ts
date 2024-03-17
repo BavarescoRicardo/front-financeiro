@@ -73,10 +73,13 @@ export class BudgetComponent implements OnInit {
   }
 
   fetchBudgets() {
-    this.http.get<any[]>(`${this.apiURL}/budget`)
+    this.http.get<any[]>(`${this.apiURL}/user/${localStorage.getItem('email')}/budgets`, {
+      headers: {
+          "Authorization": `Bearer ${localStorage.getItem('token')}`
+      }})
       .subscribe(
         (data: any[]) => {
-          this.budgets = data; // Use the correct property name here
+          this.budgets = [data]; // Use the correct property name here
         },
         (error: any) => {
           console.error(error);

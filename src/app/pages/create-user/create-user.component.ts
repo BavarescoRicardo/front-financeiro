@@ -77,7 +77,10 @@ export class CreateUserComponent implements OnInit {
   }
 
   fetchUsers() {
-    this.http.get<any[]>(`${this.apiURL}/user`)
+    this.http.get<any[]>(`${this.apiURL}/user`, {
+      headers: {
+          "Authorization": `Bearer ${localStorage.getItem('token')}`
+      }})
       .subscribe(
         (data: any[]) => {
           this.users = data; // Use the correct property name here

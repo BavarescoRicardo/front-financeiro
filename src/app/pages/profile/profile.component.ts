@@ -49,6 +49,7 @@ export class ProfileComponent implements OnInit {
     const email = this.profiles[0].sub;
     if (email) {
       console.log("Tenta pesquisar pelo email: " +email);
+      localStorage.setItem('email', email);
 
       const userResult = this.userDao?.fetchOneUser(email);
       if (userResult) {
