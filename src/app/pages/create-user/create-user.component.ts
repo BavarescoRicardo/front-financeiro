@@ -8,7 +8,7 @@ import { User } from '../../dao/user/user';
   templateUrl: './create-user.component.html',
   styleUrls: ['./create-user.component.scss']
 })
-export class CreateUserComponent implements OnInit {  
+export class CreateUserComponent implements OnInit {    
   user: User = {
     nome: '',
     senha: '',
@@ -86,7 +86,7 @@ export class CreateUserComponent implements OnInit {
       }})
       .subscribe(
         (data: any[]) => {
-          this.users = data; // Use the correct property name here
+          this.users = data;
         },
         (error: any) => {
           console.error(error);

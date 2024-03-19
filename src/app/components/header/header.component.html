@@ -7,7 +7,10 @@
         <button mat-flat-button color="primary" routerLink="/">Inicio</button>
         <button mat-flat-button color="primary" routerLink="/cadastro">Cadastro</button>
         <button mat-flat-button color="primary" routerLink="/login">Login</button>
-        <button mat-flat-button color="primary" routerLink="/budget">Meu budget</button>
+
+        <div *ngIf="canShow">
+          <button mat-flat-button color="primary" routerLink="/budget">Meu budget</button>
+        </div>
         <button mat-flat-button color="primary">Minhas metas</button>
         <button mat-flat-button (click)="openDialog()">Sobre</button>
       </div>
