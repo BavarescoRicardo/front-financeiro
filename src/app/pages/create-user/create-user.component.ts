@@ -30,7 +30,7 @@ export class CreateUserComponent implements OnInit {
               .subscribe(
                 (resultado: any) => {
                   localStorage.setItem('token', resultado.access_token);
-                  this.fetchUsers();
+                  this.router.navigate(['/', 'profile']);
                 },
                 (erro: any) => {
                   if(erro.status == 400) {
@@ -50,8 +50,6 @@ export class CreateUserComponent implements OnInit {
   removeUser(user: any) {
     const index = this.users.indexOf(user);
     if (index !== -1) {
-      console.log("Tenta remover");
-      console.log(user._id);
       this.removerUser(user._id);
     }
   }

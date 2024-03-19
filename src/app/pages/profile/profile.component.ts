@@ -48,7 +48,6 @@ export class ProfileComponent implements OnInit {
   }
 
   consultaOrcamento() {
-    // Add logic to remove the budget item, e.g., make an HTTP DELETE request
     const email = this.profiles[0].sub;
     if (email) {
       localStorage.setItem('email', email);
