@@ -6,6 +6,9 @@
       <div class="botoes">
         <button mat-flat-button color="primary" routerLink="/">Inicio</button>
         <button mat-flat-button color="primary" routerLink="/cadastro">Cadastro</button>
+        <div *ngIf="canShow">
+          <button mat-flat-button color="primary" (click)="logout()">Logout</button>
+        </div>
         <button mat-flat-button color="primary" routerLink="/login">Login</button>
 
         <div *ngIf="canShow">

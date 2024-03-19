@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit {
 
 
   ngOnInit() {
-    this.userDao = new UserDao(this.router, this.http, this.apiURL);
+    this.userDao = new UserDao(this.router, this.http, this.apiURL);    
     this.fetchProfiles();
   }
 
@@ -36,7 +36,10 @@ export class ProfileComponent implements OnInit {
       .subscribe(
         (data: any[]) => {
           this.profiles = [data];
-          this.consultaOrcamento();
+          var email = localStorage.getItem('email');
+          if(!(email != null && email.length > 1)){
+            this.consultaOrcamento();
+          }          
         },
         (error: any) => {
           console.error(error);
@@ -48,16 +51,8 @@ export class ProfileComponent implements OnInit {
     // Add logic to remove the budget item, e.g., make an HTTP DELETE request
     const email = this.profiles[0].sub;
     if (email) {
-      console.log("Tenta pesquisar pelo email: " +email);
       localStorage.setItem('email', email);
-
-      const userResult = this.userDao?.fetchOneUser(email);
-      if (userResult) {
-        const user = userResult as User;
-        if (user.budgets) {
-          console.log(user.budgets);
-        }      
-      }
+      window.location.reload();
     } 
   } 
 }

@@ -18,9 +18,15 @@ export class HeaderComponent {
     }
   }
 
+  logout() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('email');
+    window.location.reload();
+  } 
+  
   openDialog() {
     this.dialog.open(ModalSimplesComponent);
-  }  
+  }
   @Input()src: string = '';
   @Input()texto: string = '';  
 }

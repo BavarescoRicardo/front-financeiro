@@ -13,7 +13,6 @@ import { MatInputModule } from '@angular/material/input';
 import { ContainerComponent } from './components/container/container.component';
 import { HomeComponent } from './pages/home/home.component'; 
 import { MatCardModule } from '@angular/material/card';
-import { CardSimplesComponent } from './components/card-simples/card-simples.component';
 import { LoginComponent } from './pages/login/login.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ModalSimplesComponent } from './components/modal-simples/modal-simples.component';   
@@ -37,7 +36,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     AppComponent,
     ContainerComponent,
     HomeComponent,
-    CardSimplesComponent,
     LoginComponent,
     CreateUserComponent,
     BudgetComponent,
