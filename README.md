@@ -13,7 +13,7 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-# Trabalho A1 para pós Graduação 
+# Trabalho Final para pós Graduação 
 ## Princípios do Desenvolvimento Web e Mobile - 2024
 
 Inicio do projeto 29/02/2024
