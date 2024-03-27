@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { ContainerComponent } from './components/container/container.component';
 import { HomeComponent } from './pages/home/home.component'; 
+import { GoalComponent } from './pages/goal/goal.component';
 import { MatCardModule } from '@angular/material/card';
 import { LoginComponent } from './pages/login/login.component';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -25,6 +26,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { CardSimplesComponent } from './components/card-simples/card-simples.component';
 
 
 @NgModule({
@@ -40,7 +42,9 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     CreateUserComponent,
     BudgetComponent,
     ProfileComponent,
-    ModalSimplesComponent
+    GoalComponent,
+    ModalSimplesComponent,
+    CardSimplesComponent
   ],
   imports: [
     BrowserModule,

@@ -11,7 +11,8 @@ export class BudgetComponent implements OnInit {
   budget: any = {
     name: '',
     amount: 0,
-    category: ''
+    category: '',
+    userId: localStorage.getItem('codigo')
   };
 
   budgets: any[] = [];

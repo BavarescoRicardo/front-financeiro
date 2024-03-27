@@ -38,7 +38,7 @@ export class ProfileComponent implements OnInit {
           this.profiles = [data];
           var email = localStorage.getItem('email');
           if(!(email != null && email.length > 1)){
-            this.consultaOrcamento();
+            this.salvaLocalUsuario();
           }          
         },
         (error: any) => {
@@ -47,10 +47,12 @@ export class ProfileComponent implements OnInit {
       );
   }
 
-  consultaOrcamento() {
+  salvaLocalUsuario() {
     const email = this.profiles[0].sub;
-    if (email) {
+    const codigo = this.profiles[0].codigo;
+    if (email && codigo) {
       localStorage.setItem('email', email);
+      localStorage.setItem('codigo', codigo);
       window.location.reload();
     } 
   } 
