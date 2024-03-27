@@ -20,7 +20,8 @@ export class GoalComponent {
   }
 
   fetchGoals() {
-    this.http.get<any[]>(`${this.apiURL}/user/${localStorage.getItem('email')}/goal`, {
+    // this.http.get<any[]>(`${this.apiURL}/user/${localStorage.getItem('email')}/goal`, {
+    this.http.get<any[]>(`${this.apiURL}/goal`, {
       headers: {
           "Authorization": `Bearer ${localStorage.getItem('token')}`
       }})
