@@ -85,7 +85,7 @@ export class BudgetComponent implements OnInit {
       }})
       .subscribe(
         (data: any[]) => {
-          this.budgets = [data]; // Use the correct property name here
+          this.budgets = data; // Use the correct property name here
         },
         (error: any) => {
           console.error(error);
