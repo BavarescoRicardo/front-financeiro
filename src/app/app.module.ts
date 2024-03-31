@@ -27,6 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CardSimplesComponent } from './components/card-simples/card-simples.component';
+import { ModalMetaComponent } from './components/modal-meta/modal-meta.component';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { CardSimplesComponent } from './components/card-simples/card-simples.com
     ProfileComponent,
     GoalComponent,
     ModalSimplesComponent,
+    ModalMetaComponent,
     CardSimplesComponent
   ],
   imports: [

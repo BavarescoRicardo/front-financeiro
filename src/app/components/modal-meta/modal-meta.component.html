@@ -1,0 +1,34 @@
+<section class="modal">
+  <h1 mat-dialog-title>Nova Meta</h1>
+  <div mat-dialog-content>
+      Olá, <br>
+      <div class="modal-meta">
+        Preencha o formulario da nova meta aqui
+
+        <form class="form" (ngSubmit)="submitForm()">
+          <mat-form-field class="field-full-width">
+            <label class="field-label">Seu nome</label><input matInput placeholder="Digite seu nome" name="nome" [(ngModel)]="goal.nome" required>
+          </mat-form-field>
+        
+          <mat-form-field class="field-full-width">
+            <label class="field-label">Seu email</label><input matInput placeholder="Digite seu email" name="email" [(ngModel)]="goal.email" type="email" required>
+          </mat-form-field>
+        
+          <mat-form-field class="field-full-width">
+            <label class="field-label">Sua senha</label><input matInput placeholder="Digite sua senha" name="senha" [(ngModel)]="goal.senha" type="password" required>
+          </mat-form-field>
+        
+          <mat-form-field class="field-full-width">
+            <label class="field-label">Sua idade</label><input matInput name="idade" [(ngModel)]="goal.idade" type="number" required>
+          </mat-form-field>
+        
+          <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+        </form>
+
+      </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cadastrar</button>
+    <button mat-button mat-dialog-close>Cancelar</button>
+  </div>
+  </section>

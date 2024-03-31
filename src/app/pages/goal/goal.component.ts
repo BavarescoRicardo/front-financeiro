@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalMetaComponent } from '../../components/modal-meta/modal-meta.component';
 
 @Component({
   selector: 'app-goal',
@@ -11,7 +12,8 @@ export class GoalComponent {
   goals: any[] = [];
   displayedColumns: string[] = ['descricao', 'previsao', 'valor', 'imagem', 'aportes', 'remover'];  
 
-  constructor(private router: Router, private http : HttpClient) { }
+  canShow: boolean = false;
+  constructor(public dialog: MatDialog, private http : HttpClient) { }
 
   apiURL = "http://localhost:3000"; 
 
@@ -19,8 +21,12 @@ export class GoalComponent {
     this.fetchGoals();
   }
 
+  
+  openDialog() {
+    this.dialog.open(ModalMetaComponent);
+  }  
+
   fetchGoals() {
-    // this.http.get<any[]>(`${this.apiURL}/user/${localStorage.getItem('email')}/goal`, {
     this.http.get<any[]>(`${this.apiURL}/goal`, {
       headers: {
           "Authorization": `Bearer ${localStorage.getItem('token')}`
