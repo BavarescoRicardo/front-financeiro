@@ -3,18 +3,17 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-modal-simples',
+  selector: 'app-modal-meta',
   templateUrl: './modal-meta.component.html',
   styleUrls: ['./modal-meta.component.scss']
 })
 export class ModalMetaComponent {
   goal: any = {
-    nome: '',
-    senha: '',
-    email: '',
-    idade: 0,
-    createdat: '',
-    updatedat: ''
+    descricao: '',
+    previsao:  '',
+    valor: '', 
+    imagem: '',  
+    user: ''
   };
 
   goals: any[] = [];

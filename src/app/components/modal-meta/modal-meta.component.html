@@ -1,31 +1,27 @@
 <section class="modal">
   <h1 mat-dialog-title>Nova Meta</h1>
   <div mat-dialog-content>
-      Olá, <br>
-      <div class="modal-meta">
-        Preencha o formulario da nova meta aqui
 
+      <div class="modal-meta">
         <form class="form" (ngSubmit)="submitForm()">
           <mat-form-field class="field-full-width">
-            <label class="field-label">Seu nome</label><input matInput placeholder="Digite seu nome" name="nome" [(ngModel)]="goal.nome" required>
+            <label class="field-label">Descrição</label><input matInput placeholder="Digite a descricao" name="descricao" [(ngModel)]="goal.descricao" required>
           </mat-form-field>
         
           <mat-form-field class="field-full-width">
-            <label class="field-label">Seu email</label><input matInput placeholder="Digite seu email" name="email" [(ngModel)]="goal.email" type="email" required>
+            <label class="field-label">Previsão</label><input matInput placeholder="Digite a previsão" name="previsao" [(ngModel)]="goal.previsao" type="date" required>
           </mat-form-field>
         
           <mat-form-field class="field-full-width">
-            <label class="field-label">Sua senha</label><input matInput placeholder="Digite sua senha" name="senha" [(ngModel)]="goal.senha" type="password" required>
+            <label class="field-label">Valor</label><input matInput placeholder="Informe o valor" name="valor" [(ngModel)]="goal.valor" type="number" required>
           </mat-form-field>
         
           <mat-form-field class="field-full-width">
-            <label class="field-label">Sua idade</label><input matInput name="idade" [(ngModel)]="goal.idade" type="number" required>
-          </mat-form-field>
-        
-          <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+            <label class="field-label">Imagem</label><input matInput name="imagem" [(ngModel)]="goal.imagem" >
+          </mat-form-field>        
         </form>
-
       </div>
+
   </div>
   <div mat-dialog-actions>
     <button mat-button mat-dialog-close>Cadastrar</button>
