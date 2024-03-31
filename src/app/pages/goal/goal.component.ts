@@ -10,9 +10,11 @@ import { ModalMetaComponent } from '../../components/modal-meta/modal-meta.compo
 })
 export class GoalComponent {
   goals: any[] = [];
-  displayedColumns: string[] = ['descricao', 'previsao', 'valor', 'imagem', 'aportes', 'remover'];  
+  displayedColumns: string[] = ['descricao', 'previsao', 'valor', 'imagem', 'remover'];  
 
   canShow: boolean = false;
+  src: string = '';
+  texto: string = '';
   constructor(public dialog: MatDialog, private http : HttpClient) { }
 
   apiURL = "http://localhost:3000"; 
