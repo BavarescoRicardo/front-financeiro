@@ -24,18 +24,21 @@ export class ModalMetaComponent {
 
   adicionarUsuario(usuario: any) {
     console.log('Goal:', usuario);
-    this.http.post(`${ this.apiURL }/goal`, usuario)    
-              .subscribe(
-                (resultado: any) => {
-                  localStorage.setItem('token', resultado.access_token);
-                  this.router.navigate(['/', 'profile']);
-                },
-                (erro: any) => {
-                  if(erro.status == 400) {
-                    console.log(erro);
-                  }
-                }
-              );
+    this.http.post(`${ this.apiURL }/goal`, usuario, {
+        headers: {
+            "Authorization": `Bearer ${localStorage.getItem('token')}`
+        }})    
+          .subscribe(
+            (resultado: any) => {
+              localStorage.setItem('token', resultado.access_token);
+              this.router.navigate(['/', 'profile']);
+            },
+            (erro: any) => {
+              if(erro.status == 400) {
+                console.log(erro);
+              }
+            }
+          );
   }
 
   submitForm() {
