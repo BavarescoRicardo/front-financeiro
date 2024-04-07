@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal-meta',
@@ -18,7 +19,7 @@ export class ModalMetaComponent {
 
   goals: any[] = [];
 
-  constructor(private router: Router, private http : HttpClient) { }
+  constructor(public dialog: MatDialog, private router: Router, private http : HttpClient) { }
   apiURL = "http://localhost:3000";  
 
   adicionarMeta(goal: any) {
@@ -28,7 +29,8 @@ export class ModalMetaComponent {
         }})    
           .subscribe(
             (resultado: any) => {
-              this.router.navigate(['/', 'profile']);
+              this.closeDialog();
+              this.router.navigate(['/', 'goal']);
             },
             (erro: any) => {
               if(erro.status == 400) {
@@ -44,5 +46,9 @@ export class ModalMetaComponent {
   goalname : string ="";
   password : string ="";
   show: boolean= false;
+
+  closeDialog() {
+    this.dialog.closeAll();
+  }    
 
 }
