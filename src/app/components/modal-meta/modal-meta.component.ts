@@ -13,7 +13,7 @@ export class ModalMetaComponent {
     previsao:  '',
     valor: '', 
     imagem: '',  
-    user: ''
+    user: localStorage.getItem('codigo')
   };
 
   goals: any[] = [];
@@ -22,14 +22,12 @@ export class ModalMetaComponent {
   apiURL = "http://localhost:3000";  
 
   adicionarMeta(goal: any) {
-    console.log('Goal:', goal);
     this.http.post(`${ this.apiURL }/goal`, goal, {
         headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`
         }})    
           .subscribe(
             (resultado: any) => {
-              localStorage.setItem('token', resultado.access_token);
               this.router.navigate(['/', 'profile']);
             },
             (erro: any) => {
