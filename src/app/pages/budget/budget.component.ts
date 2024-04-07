@@ -43,8 +43,6 @@ export class BudgetComponent implements OnInit {
   removeBudget(budget: any) {
     const index = this.budgets.indexOf(budget);
     if (index !== -1) {
-      console.log("Tenta remover");
-      console.log(budget._id);
       this.removerBudget(budget._id);
     }
   }

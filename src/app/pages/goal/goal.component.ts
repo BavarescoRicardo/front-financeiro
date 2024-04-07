@@ -10,7 +10,7 @@ import { ModalMetaComponent } from '../../components/modal-meta/modal-meta.compo
 })
 export class GoalComponent {
   goals: any[] = [];
-  displayedColumns: string[] = ['descricao', 'previsao', 'valor', 'imagem'];  
+  displayedColumns: string[] = ['descricao', 'previsao', 'valor', 'imagem', 'remover'];  
 
   canShow: boolean = false;
   src: string = '';
@@ -39,6 +39,32 @@ export class GoalComponent {
         },
         (error: any) => {
           console.error(error);
+        }
+      );
+  }
+  
+  removeGoal(goal: any) {
+    const index = this.goals.indexOf(goal);
+    if (index !== -1) {
+      this.removerGoal(goal._id);
+    }
+  }
+
+  removerGoal(indice: string) {
+    console.log('Goal:', indice);
+    this.http.delete(`${this.apiURL}/goal/${indice}`, {
+      headers: {
+          "Authorization": `Bearer ${localStorage.getItem('token')}`
+      }})
+      .subscribe(
+        (resultado: any) => {
+          console.log(resultado);
+          this.fetchGoals();
+        },
+        (erro: any) => {
+          if (erro.status == 400) {
+            console.log(erro);
+          }
         }
       );
   }   
