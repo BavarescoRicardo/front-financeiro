@@ -17,14 +17,13 @@ export class ModalMetaComponent {
   };
 
   goals: any[] = [];
-  displayedColumns: string[] = ['nome', 'email', 'idade', 'remover'];  
 
   constructor(private router: Router, private http : HttpClient) { }
   apiURL = "http://localhost:3000";  
 
-  adicionarUsuario(usuario: any) {
-    console.log('Goal:', usuario);
-    this.http.post(`${ this.apiURL }/goal`, usuario, {
+  adicionarMeta(goal: any) {
+    console.log('Goal:', goal);
+    this.http.post(`${ this.apiURL }/goal`, goal, {
         headers: {
             "Authorization": `Bearer ${localStorage.getItem('token')}`
         }})    
@@ -42,7 +41,7 @@ export class ModalMetaComponent {
   }
 
   submitForm() {
-    this.adicionarUsuario(this.goal);
+    this.adicionarMeta(this.goal);
   }
   goalname : string ="";
   password : string ="";

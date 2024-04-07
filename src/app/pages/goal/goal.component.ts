@@ -6,11 +6,11 @@ import { ModalMetaComponent } from '../../components/modal-meta/modal-meta.compo
 @Component({
   selector: 'app-goal',
   templateUrl: './goal.component.html',
-  styleUrl: './goal.component.css'
+  styleUrl: './goal.component.scss'
 })
 export class GoalComponent {
   goals: any[] = [];
-  displayedColumns: string[] = ['descricao', 'previsao', 'valor', 'imagem', 'remover'];  
+  displayedColumns: string[] = ['descricao', 'previsao', 'valor', 'imagem'];  
 
   canShow: boolean = false;
   src: string = '';
