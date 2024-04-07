@@ -2,8 +2,8 @@
   <h1 mat-dialog-title>Nova Meta</h1>
   <div mat-dialog-content>
 
+    <form class="form" (ngSubmit)="submitForm()">
       <div class="modal-meta">
-        <form class="form" (ngSubmit)="submitForm()">
           <mat-form-field class="field-full-width">
             <label class="field-label">Descrição</label><input matInput placeholder="Digite a descricao" name="descricao" [(ngModel)]="goal.descricao" required>
           </mat-form-field>
@@ -19,13 +19,11 @@
           <mat-form-field class="field-full-width">
             <label class="field-label">Imagem</label><input matInput name="imagem" [(ngModel)]="goal.imagem" >
           </mat-form-field>
-          <button mat-raised-button color="primary" type="submit">Cadastrar</button>        
-        </form>
       </div>
-
+      <div mat-dialog-actions>
+        <button mat-button mat-dialog-close type="submit">Cadastrar</button>
+        <button mat-button mat-dialog-close>Cancelar</button>
+      </div>
+  </form>
   </div>
-  <div mat-dialog-actions>
-    <button mat-button mat-dialog-close type="submit">Cadastrar</button>
-    <button mat-button mat-dialog-close>Cancelar</button>
-  </div>
-  </section>
+</section>
