@@ -28,6 +28,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { CardSimplesComponent } from './components/card-simples/card-simples.component';
 import { ModalMetaComponent } from './components/modal-meta/modal-meta.component';
+import { CardGoalComponent } from './components/card-goal/card-goal.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ModalMetaComponent } from './components/modal-meta/modal-meta.component
     GoalComponent,
     ModalSimplesComponent,
     ModalMetaComponent,
-    CardSimplesComponent
+    CardSimplesComponent,
+    CardGoalComponent
   ],
   imports: [
     BrowserModule,

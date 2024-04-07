@@ -1,10 +1,10 @@
 <div class="lista-metas">
   <ul *ngFor="let result of goals, let i = index">
     <div class="lista-cartoes">    
-        <app-card-simples
-            src="assets/images/public/imagens/fimusi2023/aplicarnotas_epalco3.jpg"
-            texto="Imagem do evento realizado em 2023.">
-        </app-card-simples>
+        <app-card-goal>
+            imagem={{ result.imagem }}
+            descricao={{ result.descricao }}
+        </app-card-goal>
     </div>
   </ul>
 
