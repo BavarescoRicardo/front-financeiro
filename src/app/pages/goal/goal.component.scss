@@ -1,0 +1,21 @@
+.lista-cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-metas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-novo {
+    display: block;
+    float: right;
+    margin: 10ch;
+}
