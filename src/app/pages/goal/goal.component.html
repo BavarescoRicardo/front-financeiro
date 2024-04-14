@@ -1,9 +1,10 @@
 <div class="lista-metas">
   <ul *ngFor="let result of goals, let i = index">
-    <div class="lista-cartoes">    
-        <app-card-goal>
-            imagem={{ result.imagem }}
-            descricao={{ result.descricao }}
+    <div class="lista-cartoes">
+        <app-card-goal
+            [imagem]="result.imagem"
+            [descricao]="result.descricao"
+            [valor]="result.valor.toString()">
         </app-card-goal>
     </div>
   </ul>

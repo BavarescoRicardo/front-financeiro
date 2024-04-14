@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalMetaComponent } from '../../components/modal-meta/modal-meta.component';
+import { Goal } from '../../dao/goal/goal';
 
 @Component({
   selector: 'app-goal',
@@ -9,7 +10,7 @@ import { ModalMetaComponent } from '../../components/modal-meta/modal-meta.compo
   styleUrl: './goal.component.scss'
 })
 export class GoalComponent {
-  goals: any[] = [];
+  goals: Goal[] = [];
   displayedColumns: string[] = ['descricao', 'previsao', 'valor', 'imagem', 'remover'];  
 
   canShow: boolean = false;
@@ -29,12 +30,13 @@ export class GoalComponent {
   }  
 
   fetchGoals() {
-    this.http.get<any[]>(`${this.apiURL}/goal`, {
+    this.http.get<Goal[]>(`${this.apiURL}/goal`, {
       headers: {
           "Authorization": `Bearer ${localStorage.getItem('token')}`
       }})
       .subscribe(
-        (data: any[]) => {
+        (data: Goal[]) => {
+          console.log(data);
           this.goals = data;
         },
         (error: any) => {
@@ -58,7 +60,7 @@ export class GoalComponent {
       }})
       .subscribe(
         (resultado: any) => {
-          console.log(resultado);
+          alert("Removido com sucesso: " + resultado)
           this.fetchGoals();
         },
         (erro: any) => {

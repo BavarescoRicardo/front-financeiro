@@ -7,7 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class CardGoalComponent {
   @Input()descricao: string = '';
-  @Input()previsao: Date = new Date;
-  @Input()valor: number = 0;
+  @Input()valor: string = '';
   @Input()imagem: string = '';  
 }
